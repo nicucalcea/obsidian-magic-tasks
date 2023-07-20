@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
+	"id": "magic-tasks",
+	"name": "Magic Tasks",
+	"version": "2023.07.20",
 	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "This plugin uses the OpenAI API to automatically break down tasks into smaller subtasks.",
+	"author": "Nicu Calcea",
+	"authorUrl": "https://nicu.md",
 	"isDesktopOnly": false
 }

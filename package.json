@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
-	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"name": "magic-tasks",
+	"version": "2023.07.20",
+	"description": "This plugin uses the OpenAI API to automatically break down tasks into smaller subtasks.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
