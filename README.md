@@ -4,6 +4,8 @@ This plugin is inspired by goblin.tools's [Magic ToDo](https://goblin.tools/).
 
 Click on a task in Obsidian, press `Ctrl + M` (or `Command + M` on a Mac) to ask ChatGPT to break down the task into small sub-tasks. You can change the shortcut to something else if you prefer.
 
+![Screen recording of Magic Tasks in action](https://github.com/nicucalcea/obsidian-magic-tasks/magic-tasks-demo.gif)
+
 On mobile, tap on the task you want to break down and pull down to open the menu of actions. Search for `Magic Tasks` and you get it from there.
 
 ### Disclaimer
