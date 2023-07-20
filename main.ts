@@ -30,7 +30,7 @@ export default class MagicTasksPlugin extends Plugin {
     this.addCommand({
       id: 'select-current-line-on-keystroke',
       name: 'select the current line in editor',
-      hotkeys: [{ modifiers: [], key: 'Escape' }],
+      hotkeys: [{ modifiers: ["Mod"], key: "m" }],
       editorCallback: async (editor: Editor) => {
         selectLine(editor);
         const selectedText = editor.getSelection();
