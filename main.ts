@@ -28,8 +28,8 @@ export default class MagicTasksPlugin extends Plugin {
     this.addSettingTab(new MagicTasksSettingTab(this.app, this));
 
     this.addCommand({
-      id: 'select-current-line-on-keystroke',
-      name: 'select the current line in editor',
+      id: 'break-down-task',
+      name: 'break down task into subtasks',
       hotkeys: [{ modifiers: ["Mod"], key: "m" }],
       editorCallback: async (editor: Editor) => {
         selectLine(editor);
