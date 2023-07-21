@@ -8,7 +8,7 @@ Click on a task in Obsidian, press `Ctrl + M` (or `Command + M` on a Mac) to ask
 
 On mobile, tap on the task you want to break down and pull down to open the menu of actions. Search for `Magic Tasks` and you get it from there.
 
-### Instalation
+### Installation
 
 Download the latest release and copy the `main.js` and `manifest.json` files to a new folder called `magic-tasks` in `VaultFolder/.obsidian/plugins/`. Enable it from `Community plugins`.
 
