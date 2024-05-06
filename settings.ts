@@ -29,10 +29,10 @@ export class MagicTasksSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
     .setName("Ollama URL")
-    .setDesc("Provide the URL for the Ollama API")
+    .setDesc("Provide the URL for the Ollama API (include trailing slash)")
     .addText((text) =>
       text
-        .setPlaceholder("http://127.0.0.1:11434")
+        .setPlaceholder("http://127.0.0.1:11434/")
         .setValue(this.plugin.settings.ollama_url)
         .onChange(async (value) => {
           this.plugin.settings.ollama_url = value;
