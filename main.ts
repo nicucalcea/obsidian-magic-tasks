@@ -20,7 +20,7 @@ interface MagicTasksPluginSettings {
 
 const DEFAULT_SETTINGS: Partial<MagicTasksPluginSettings> = {
   openaiKey: "sk-XXXXXX",
-  ollama_url: "http://127.0.0.1:11434",
+  ollama_url: "http://127.0.0.1:11434/",
   ollama_model: "llama3",
   api_select: "openai"
 };
