@@ -12,17 +12,23 @@ function selectLine(editor: Editor) {
 }
 
 interface MagicTasksPluginSettings {
-  openaiKey: string;
+  api_select: string;
+  openai_key: string;
+  openai_model: string;
   ollama_url: string;
   ollama_model: string;
-  api_select: string;
+  system_prompt: string;
+  user_prompt: string;
 }
 
 const DEFAULT_SETTINGS: Partial<MagicTasksPluginSettings> = {
-  openaiKey: "sk-XXXXXX",
+  api_select: "openai",
+  openai_key: "sk-XXXXXX",
+  openai_model: "gpt-3.5-turbo",
   ollama_url: "http://127.0.0.1:11434/",
   ollama_model: "llama3",
-  api_select: "openai"
+  system_prompt: "You are a helpful assistant that responds with markdown-formatted tasks in the format `- [ ] This is a subtask`. Please only respond with tasks, no other text.",
+  user_prompt: "Please break down the following task into smaller subtasks: "
 };
 
 export default class MagicTasksPlugin extends Plugin {
@@ -78,8 +84,8 @@ export default class MagicTasksPlugin extends Plugin {
 
       if (this.settings.api_select === 'openai') {
         endpoint = OPENAI_API_ENDPOINT;
-        headers['Authorization'] = `Bearer ${this.settings.openaiKey}`;
-        model = "gpt-3.5-turbo";
+        headers['Authorization'] = `Bearer ${this.settings.openai_key}`;
+        model = this.settings.openai_model;
       } else if (this.settings.api_select === 'ollama') {
         endpoint = this.settings.ollama_url + 'v1/chat/completions';
         model = this.settings.ollama_model;
@@ -90,8 +96,8 @@ export default class MagicTasksPlugin extends Plugin {
         body: JSON.stringify({
           "model": model,
           "messages": [
-            { "role": "system", "content": "You are a helpful assistant that responds with markdown-formatted tasks in the format `- [ ] This is a subtask`. Please only respond with tasks, no other text." },
-            { "role": "user", "content": `Please break down the following task into smaller subtasks: ${text}` } // Append selectedText to the user message
+            { "role": "system", "content": this.settings.system_prompt },
+            { "role": "user", "content": `${this.settings.system_prompt} ${text}` } // Append selectedText to the user message
           ]
         }),
       });

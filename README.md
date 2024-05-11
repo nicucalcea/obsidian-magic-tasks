@@ -16,6 +16,4 @@ Alternatively, you can install it by just copying the link into [BRAT](https://g
 
 ### Disclaimer
 
-You will need an [OpenAI API key](https://platform.openai.com/docs/api-reference) for this work. This also means your task will be sent to the OpenAI servers for processing. Read [their privacy policy](https://openai.com/policies/api-data-usage-policies) to see how they handle your data.
-
-There's also a cost associated, although I can't say how much each query will cost. Under $0.01, from my experience.
+You will need an [OpenAI API key](https://platform.openai.com/docs/api-reference) or Ollama for this work. This also means your task will be sent to the OpenAI servers for processing, if you use that. Read [their privacy policy](https://openai.com/policies/api-data-usage-policies) to see how they handle your data.

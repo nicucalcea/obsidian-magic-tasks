@@ -1,9 +1,9 @@
 {
 	"id": "magic-tasks",
 	"name": "Magic Tasks",
-	"version": "2023.07.20",
+	"version": "2024.05.11",
 	"minAppVersion": "0.15.0",
-	"description": "This plugin uses the OpenAI API to automatically break down tasks into smaller subtasks.",
+	"description": "This plugin uses the OpenAI API or Ollama to automatically break down tasks into smaller subtasks.",
 	"author": "Nicu Calcea",
 	"authorUrl": "https://nicu.md",
 	"isDesktopOnly": false

@@ -1,7 +1,7 @@
 {
 	"name": "magic-tasks",
-	"version": "2023.07.20",
-	"description": "This plugin uses the OpenAI API to automatically break down tasks into smaller subtasks.",
+	"version": "2024.05.11",
+	"description": "This plugin uses the OpenAI API or Ollama to automatically break down tasks into smaller subtasks.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
